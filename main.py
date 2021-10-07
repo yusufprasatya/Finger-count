@@ -3,19 +3,19 @@ import time
 import os
 import HandTrackingModule as htm
 
-# Opened webcam
+# Open webcam
 wCam, hCam = 640, 480
 capture = cv2.VideoCapture(0)
 capture.set(3, wCam)
 capture.set(4, hCam)
 
-# Your images folder
+# Your images folder here
 folderPath = "Fingerimages"
 myList = os.listdir(folderPath)
 print(myList)
 overlayList = []
 
-# Loop every iamge on folder above.
+# Loop every images on folder above.
 for imPath in myList:
     image = cv2.imread(f'{folderPath}/{imPath}')
     overlayList.append(image)
